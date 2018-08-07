@@ -9,27 +9,26 @@ while count<15:
     cock=0
     i=str(input('Enter a word in CAPS which contains only 6 characters'))
     l=list(i)
-    if(len(l)!=6):
-        print("You have to enter only 6 characters word")
-        print("The answer is")
-        print(n)
-        break
+    while len(l)!=6:
+        print("You have to enter only 6 characters word, Guess again")
+        i=str(input())
+        l=list(i)
     for h in range(6):
         for g in range(6):
             if(l[h]==f[g]):
                 cock=cock+1
-    for m in range(4):
+    for m in range(6):
         if(l[m]==f[m]):
             bull=bull+1
             cock=cock-1
-    print("correct characters but in wrong place {}".format(cock))
-    print("correct characters and in correct place {}".format(bull))
+    print("Number of characters that are correct,but in wrong place {}".format(cock))
+    print("Number of characters that are correct and in correct place {}".format(bull))
     count+=1
     if(count<15):
         print("You have {} chances left".format(15-count))
     elif(count==15):
         print("you've crossed all the chances, the answer is {}".format(n))
-    
-if(bull==6):
-    print("yes you gussed it correct, the number is {}".format(n))
-    
+    if(bull==6):
+        print("yes you gussed it correct, the number is {}".format(n))
+        break
+   
