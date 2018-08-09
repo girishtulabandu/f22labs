@@ -29,6 +29,6 @@ while count<15:
     elif(count==15):
         print("you've crossed all the chances, the answer is {}".format(n))
     if(bull==6):
-        print("yes you gussed it correct, the number is {}".format(n))
+        print("yes you gussed it correct, the answer is {}".format(n))
         break
    
